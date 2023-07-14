@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Achieving a regular flow of data between main() and an interrupt service routine using a lock-free circular queue with a producer-consumer design pattern</title>
+</head>
+<body>
+
+<h1>Achieving a regular flow of data between main() and an interrupt service routine using a lock-free circular queue with a producer-consumer design pattern</h1>
+
+<p>Copyright (C) 2018 Matthew T. Pandina</p>
+
+<p><a href="producer_consumer.pdf">This article</a> aims to illustrate how to take data that might not be
+produced at a regular interval by a routine inside main(), and smooth
+out the consumption of that data by an ISR, so it may be consumed at a
+regular interval using a lock-free circular queue.</p>
+
+<p>It also demonstrates how to design a lock-free data structure that
+can safely pass an arbitrary sized piece of data to an interrupt
+service routine, without having to disable interrupts (or use an
+ATOMIC_BLOCK).</p>
+
+<p>The sample code was written using AVR-GCC for an AVR ATmega328P,
+but it can be easily modified to work with other compilers and/or
+chips.</p>
+
+<p>The concepts presented in this article were originally developed
+for my <a href="https://sites.google.com/site/artcfox/rainbow-fire">Rainbow Fire</a> project, but are
+  applicable to a wide range of solutions.</p>
+
+<p>The project described in the article
+is available in a <a href="https://github.com/artcfox/producer-consumer">git repository</a>.</p>
+
+</body>
+</html> 
